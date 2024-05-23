@@ -20,7 +20,7 @@ File: controllers/auth_controller.py
 ```
 
 - Register
-```curl
+```bash
 curl -X POST http://localhost:8069/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{
@@ -31,7 +31,7 @@ curl -X POST http://localhost:8069/api/auth/register \
 ```
 
 - Login 
-```curl
+```bash
 curl -X POST http://localhost:8069/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{
@@ -46,7 +46,8 @@ Implement an endpoint to create a new booking.
 File: controllers/booking_controller.py
 ```
 
-```curl
+- Create Booking
+```bash
 curl -X POST http://localhost:8069/api/booking \
   -H "Content-Type: application/json
   --header 'Authorization: Bearer <REPLACE_ACCESSTOKEN>' \
