@@ -19,10 +19,43 @@ Use JWT for token-based authentication.
 File: controllers/auth_controller.py
 ```
 
+- Register
+```curl
+curl -X POST http://localhost:8069/api/auth/register \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "John Doe",
+    "email": "john@inbox4us.xyz",
+    "password": "password"
+    }'
+```
+
+- Login 
+```curl
+curl -X POST http://localhost:8069/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{
+        "email": "john@inbox4us.xyz",
+        "password": "password"
+    }'
+```
+
 #### 2. Write API for Making a Booking
 Implement an endpoint to create a new booking.
 ```
 File: controllers/booking_controller.py
+```
+
+```curl
+curl -X POST http://localhost:8069/api/booking \
+  -H "Content-Type: application/json
+  --header 'Authorization: Bearer <REPLACE_ACCESSTOKEN>' \
+  -d '{
+    "room_id": 1,
+    "customer_id": 1,
+    "checkin_date": "2022-01-01",
+    "checkout_date": "2022-01-05"
+  }'
 ```
 
 #### 3. Nice to Have (Optional)
