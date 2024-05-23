@@ -17,7 +17,7 @@ Implement an endpoint to create a new booking.
 File: controllers/booking_controller.py
 ```
 
-#### Nice to Have (Optional)
+#### 3. Nice to Have (Optional)
 - Handle Booking Status: Implement logic to manage booking statuses (checkin, checkout, booked).
 - Adding Validation for Parameters Using Decorators: Implement parameter validation using decorators to ensure correct data is provided in the API requests.
 - Write postman collection for testing the API.
