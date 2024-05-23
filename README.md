@@ -29,3 +29,5 @@ File: controllers/booking_controller.py
 - Handle Booking Status: Implement logic to manage booking statuses (checkin, checkout, booked).
 - Adding Validation for Parameters Using Decorators: Implement parameter validation using decorators to ensure correct data is provided in the API requests.
 - Write postman collection for testing the API.
+- Apply Best Practices: Write clean, maintainable code following industry best practices.
+- Document Each Function: Provide documentation for each function, explaining its purpose, parameters, and return values.
