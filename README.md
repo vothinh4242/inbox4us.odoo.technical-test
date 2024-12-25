@@ -21,7 +21,7 @@ File: controllers/auth_controller.py
 
 - Register
 ```bash
-curl -X POST http://localhost:8069/api/auth/register \
+curl -X POST http://localhost:8069/api/v1/auth/register \
   -H "Content-Type: application/json" \
   -d '{
     "name": "John Doe",
@@ -32,7 +32,7 @@ curl -X POST http://localhost:8069/api/auth/register \
 
 - Login 
 ```bash
-curl -X POST http://localhost:8069/api/auth/login \
+curl -X POST http://localhost:8069/api/v1/auth/login \
   -H "Content-Type: application/json" \
   -d '{
         "email": "john@inbox4us.xyz",
@@ -48,7 +48,7 @@ File: controllers/booking_controller.py
 
 - Create Booking
 ```bash
-curl -X POST http://localhost:8069/api/booking \
+curl -X POST http://localhost:8069/api/v1/booking \
   -H "Content-Type: application/json
   --header 'Authorization: Bearer <REPLACE_ACCESSTOKEN>' \
   -d '{
@@ -61,6 +61,7 @@ curl -X POST http://localhost:8069/api/booking \
 
 #### 3. Nice to Have (Optional)
 - Handle Booking Status: Implement logic to manage booking statuses (checkin, checkout, booked).
+- Conflict Resolution: Add logic to handle booking overlaps and display user-friendly errors.
 - Adding Validation for Parameters Using Decorators: Implement parameter validation using decorators to ensure correct data is provided in the API requests.
 - Write postman collection for testing the API.
 - Apply Best Practices: Write clean, maintainable code following industry best practices.
