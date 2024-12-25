@@ -59,7 +59,14 @@ curl -X POST http://localhost:8069/api/v1/booking \
   }'
 ```
 
-#### 3. Nice to Have (Optional)
+#### 3. Build Reports in Odoo to Track Bookings and Customer Registrations
+Objective
+Develop a reporting feature in Odoo to display insights on:
+
+- The number of bookings made within a specific period.
+- The number of customers registered in the system over time
+
+#### 4. Nice to Have (Optional)
 - Handle Booking Status: Implement logic to manage booking statuses (checkin, checkout, booked).
 - Conflict Resolution: Add logic to handle booking overlaps and display user-friendly errors.
 - Adding Validation for Parameters Using Decorators: Implement parameter validation using decorators to ensure correct data is provided in the API requests.
