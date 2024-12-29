@@ -1,0 +1,54 @@
+<odoo>
+    <record id="view_booking_report_tree" model="ir.ui.view">
+        <field name="name">booking.report.tree</field>
+        <field name="model">booking.report</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="start_date"/>
+                <field name="end_date"/>
+            </tree>
+        </field>
+    </record>
+
+     <record id="view_booking_report_form" model="ir.ui.view">
+        <field name="name">booking.report.form</field>
+        <field name="model">booking.report</field>
+        <field name="arch" type="xml">
+            <form string="Booking Report">
+                <group>
+                    <group>
+                        <field name="start_date"/>
+                    </group>
+                    <group>
+                        <field name="end_date"/>
+                    </group>
+                </group>
+
+                <footer>
+                    <button string="Generate" type="object" name="action_generate_report" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_booking_report" model="ir.actions.act_window">
+        <field name="name">Booking Reports</field>
+        <field name="res_model">booking.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menu_report"
+              parent="menu_hotel"
+              name="Booking Reports"
+              sequence="10"
+    />
+
+    <menuitem id="menu_booking_report"
+              parent="menu_report"
+              action="action_booking_report"
+              name="Booking Reports"
+              sequence="10"
+    />
+</odoo>

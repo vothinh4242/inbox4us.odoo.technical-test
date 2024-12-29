@@ -1,0 +1,41 @@
+<odoo>
+    <record id="view_hotel_booking_tree" model="ir.ui.view">
+        <field name="name">view.hotel.booking.tree</field>
+        <field name="model">hotel.booking</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="customer_id"/>
+                <field name="room_id"/>
+                <field name="check_in_date"/>
+                <field name="check_out_date"/>
+                <field name="total_amount"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="hotel_booking_graph" model="ir.ui.view">
+    <field name="name">hotel.booking.graph</field>
+    <field name="model">hotel.booking</field>
+    <field name="arch" type="xml">
+        <graph string="Booking Graph" type="bar">
+            <field name="check_in_date" interval="month" />
+        </graph>
+    </field>
+</record>
+
+    <record id="action_hotel_booking" model="ir.actions.act_window">
+        <field name="name">Hotel Booking</field>
+        <field name="res_model">hotel.booking</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_hotel" name="Hotel"/>
+    <menuitem id="menu_booking"
+              name="Booking"
+              sequence="0"
+              parent="menu_hotel"
+              action="action_hotel_booking"
+    />
+
+</odoo>
